@@ -1,0 +1,750 @@
+
+/* ==========================================================================
+   #GRID
+   ========================================================================== */
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.row-space {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.row-refine {
+  margin: 0 -15px;
+}
+
+.col-2 {
+  width: -webkit-calc((100% - 20px) / 2);
+  width: -moz-calc((100% - 20px) / 2);
+  width: calc((100% - 20px) / 2);
+}
+
+@media (max-width: 767px) {
+  .col-2 {
+    width: 100%;
+  }
+}
+
+
+/* ==========================================================================
+   #RESET
+   ========================================================================== */
+/**
+ * A very simple reset that sits on top of Normalize.css.
+ */
+body,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, dd, ol, ul,
+figure,
+hr,
+fieldset, legend {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Remove trailing margins from nested lists.
+ */
+li > ol,
+li > ul {
+  margin-bottom: 0;
+}
+
+/**
+ * Remove default table spacing.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+ * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
+ *    on fieldsets.
+ */
+fieldset {
+  min-width: 0;
+  /* [1] */
+  border: 0;
+}
+
+button {
+  outline: none;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+
+
+
+/* ==========================================================================
+   #SPACING
+   ========================================================================== */
+.p-t-15 {
+  padding-top: 15px;
+}
+
+.p-t-5 {
+  padding-top: 5px;
+}
+
+.p-t-275 {
+  padding-top: 275px;
+}
+
+@media (max-width: 767px) {
+  .p-t-275 {
+    padding-top: 120px;
+  }
+}
+
+.p-t-290 {
+  padding-top: 290px;
+}
+
+@media (max-width: 767px) {
+  .p-t-290 {
+    padding-top: 120px;
+  }
+}
+
+.p-t-200 {
+  padding-top: 200px;
+}
+
+@media (max-width: 767px) {
+  .p-t-200 {
+    padding-top: 150px;
+  }
+}
+
+.p-t-165 {
+  padding-top: 165px;
+}
+
+@media (max-width: 767px) {
+  .p-t-165 {
+    padding-top: 120px;
+  }
+}
+
+.p-b-100 {
+  padding-bottom: 100px;
+}
+
+@media (max-width: 767px) {
+  .p-b-100 {
+    padding-bottom: 250px;
+  }
+}
+
+.p-b-120 {
+  padding-bottom: 120px;
+}
+
+@media (max-width: 767px) {
+  .p-b-120 {
+    padding-bottom: 250px;
+  }
+}
+
+.m-r-45 {
+  margin-right: 45px;
+}
+
+@media (max-width: 767px) {
+  .m-r-45 {
+    margin-right: 15px;
+  }
+}
+
+/* ==========================================================================
+   #WRAPPER
+   ========================================================================== */
+.wrapper {
+  margin: 0 auto;
+}
+
+.wrapper--w680 {
+  max-width: 68px;
+}
+
+.wrapper--w720 {
+  max-width: 72px;
+}
+
+.wrapper--w900 {
+  max-width: 90px;
+}
+
+.wrapper--w1226 {
+  max-width: 1226px;
+}
+
+/* ==========================================================================
+   #BUTTON
+   ========================================================================== */
+.btn-submit {
+  display: block;
+  /*width: 100%;*/
+  line-height: 60px;
+  font-family: inherit;
+  background: #dd882c;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  margin-top: 37px;
+}
+
+@media (max-width: 767px) {
+  .btn-submit {
+    margin-top: 15px;
+  }
+}
+
+.btn-submit:hover {
+  background: #dd882c;
+}
+
+.m-t-0 {
+  margin-top: 0;
+}
+
+.m-t-15 {
+  margin-top: 15px;
+}
+
+.m-t-35 {
+  margin-top: 35px;
+}
+
+
+
+/* ==========================================================================
+   #FORM
+   ========================================================================== */
+input,
+textarea {
+  outline: none;
+  margin: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+  font-size: 18px;
+  font-family: inherit;
+}
+
+select {
+  outline: none;
+  margin: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+  font-size: 18px;
+  font-family: inherit;
+}
+
+input:disabled {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* CHECKBOX */
+/* Radio button */
+.radio-row {
+  padding-top: 10px;
+}
+
+.radio-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 700;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.radio-container:hover input ~ .radio-checkmark {
+  background-color: #fff;
+}
+
+.radio-container input:checked ~ .radio-checkmark {
+  background-color: #fff;
+}
+
+.radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .radio-checkmark:after {
+  display: block;
+}
+
+.radio-container .radio-checkmark:after {
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #00ad5f;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.input-group-icon {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon {
+  font-size: 24px;
+  color: #808080;
+  position: absolute;
+  line-height: 60px;
+  right: 20px;
+  top: 0;
+  width: 20px;
+  background: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.input-icon::before {
+  display: block;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.input--style-1 {
+  font-size: 18px;
+  padding: 16.5px 20px;
+  color: #666;
+  background: #fff;
+  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+}
+
+.input--style-1::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #ccc;
+}
+
+.input--style-1:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ccc;
+  opacity: 1;
+}
+
+.input--style-1::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ccc;
+  opacity: 1;
+}
+
+.input--style-1:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #ccc;
+}
+
+.input--style-1:-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #ccc;
+}
+
+.input--text-small {
+  font-size: 16px;
+  color: #666;
+  padding: 17.5px 20px;
+}
+
+.m-b-0 {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .m-b-0 {
+    margin-bottom: 26px;
+  }
+}
+
+
+
+
+
+/* ==========================================================================
+   #CARD
+   ========================================================================== */
+
+.card-5 {
+  position: relative;
+  background: transparent;
+}
+
+.card-5::before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#111111), to(#111111));
+  background-image: -webkit-linear-gradient(bottom, #111111 0%, #111111 100%);
+  background-image: -moz-linear-gradient(bottom, #111111 0%, #111111 100%);
+  background-image: -o-linear-gradient(bottom, #111111 0%, #111111 100%);
+  background-image: linear-gradient(to top, #111111 0%, #111111 100%);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+.card-5 .card-body {
+  padding: 59px 55px;
+  padding-bottom: 71px;
+}
+
+@media (max-width: 767px) {
+  .card-5 .card-body {
+    padding: 40px 30px;
+    padding-bottom: 55px;
+  }
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #111111;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #111111;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  text-align: center;
+  padding: 70px 20px 80px 20px;
+  transition: all ease-in-out 0.3s;
+  background: #1d1d1d;
+}
+
+.services .icon-box .icon {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.3s;
+  position: relative;
+}
+
+.services .icon-box .icon i {
+  font-size: 36px;
+  transition: 0.5s;
+  position: relative;
+}
+
+.services .icon-box .icon svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.services .icon-box .icon svg path {
+  transition: 0.5s;
+  fill: #f5f5f5;
+}
+
+.services .icon-box h4 {
+  font-weight: 600;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+}
+
+.services .icon-box h4 a {
+  color: #111;
+  transition: ease-in-out 0.3s;
+}
+
+.services .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Cta
+--------------------------------------------------------------*/
+.cta {
+  background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.7)), url("../images/download.jpg") fixed center center;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+.cta h3 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.cta p {
+  color: #fff;
+}
+
+.cta .cta-btn {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 70px;
+  transition: 0.5s;
+  margin-top: 10px;
+  background-color: #dd882c;
+  color: #fff;
+}
+
+
+
+
+
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #111111;
+}
+
+.section-title {
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 450px;
+  padding: 0 0 0;
+  margin: auto;
+}
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #222222;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #f39431;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #f39431;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #82521a;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Frequently Asked Questions
+--------------------------------------------------------------*/
+.faq {
+  padding: 60px 0;
+}
+
+.faq .faq-list {
+  padding: 0;
+  list-style: none;
+}
+
+.faq .faq-list li {
+  padding: 0 0 20px 25px;
+}
+
+.faq .faq-list a {
+  display: block;
+  position: relative;
+  font-family: #f39531;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.faq .faq-list i {
+  font-size: 18px;
+  position: absolute;
+  left: -25px;
+  top: 6px;
+}
+
+.faq .faq-list p {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.faq .faq-list a.collapse {
+  color: #f39531;
+}
+
+.faq .faq-list a.collapsed {
+  color: #f39531;
+}
+
+.faq .faq-list a.collapsed:hover {
+  color: #f39531;
+}
+
+.faq .faq-list a.collapsed i::before {
+  content: "\eab2" !important;
+}
