@@ -35,10 +35,13 @@ Route::namespace('front')->group(function(){
 
 Route::prefix('/admin')->namespace('admin')->group(function(){ 
 
+    Route::group(['middleware' => ['admin']], function(){ 
+
     Route::get('dashboard','AdminController@dashboard');
     Route::get('banner','AdminController@banner');
     Route::get('faq','AdminController@faq');
     Route::get('users','AdminController@users');
     Route::get('stories','AdminController@stories');
 
+    });
 });
