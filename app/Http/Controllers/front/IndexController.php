@@ -4,10 +4,21 @@ namespace App\Http\Controllers\front;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Auth;
 
 class IndexController extends Controller
 {
-    public function indexHome(){
+    public function indexHome(Request $req){
+        if ($req->isMethod('post')) {
+            $data = $req->all();
+
+            //dd($data);
+
+            if (Auth::guard('admin')->attempt(['email'=>$data['username'],'password'=>$data['password'],'status'=>1])) { 
+
+                return redirect('/admin/dashboard');
+             }
+        }
         return view('front.index');
     }
 

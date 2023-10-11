@@ -25,7 +25,7 @@ require __DIR__.'/auth.php';
 
 Route::namespace('front')->group(function(){ 
 
-    Route::get('/','IndexController@indexHome');
+    Route::match(['get','post'],'/','IndexController@indexHome');
     Route::get('about_us','IndexController@about_us');
     Route::get('register','IndexController@register');
     Route::get('member_login','IndexController@member_login');
@@ -37,7 +37,7 @@ Route::prefix('/admin')->namespace('admin')->group(function(){
 
     Route::group(['middleware' => ['admin']], function(){ 
 
-    Route::get('dashboard','AdminController@dashboard');
+    Route::match(['get','post'],'dashboard','AdminController@dashboard');
     Route::get('banner','AdminController@banner');
     Route::get('faq','AdminController@faq');
     Route::get('users','AdminController@users');

@@ -7,9 +7,9 @@
        </div>
        <div class="login-page">
           <div class="form">
-             <form class="login-form">
-                <input type="text" placeholder="username"/><br><br>
-                <input type="password" placeholder="password"/><br><br>
+             <form class="login-form" method="post" action="{{ url('/')}}">@csrf
+                <input type="text" name="username" id="username" placeholder="username"/><br><br>
+                <input type="password" name="password" id="password" placeholder="password"/><br><br>
                 <button>login</button>
                 <p class="message">IF YOU DON'T HAVE PASSWORD ? <a href="#"> FORGOT PASSWORD</a></p>
              </form>
