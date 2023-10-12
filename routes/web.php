@@ -26,6 +26,7 @@ require __DIR__.'/auth.php';
 Route::namespace('front')->group(function(){ 
 
     Route::match(['get','post'],'/','IndexController@indexHome');
+    Route::match(['get','post'],'admin_register','IndexController@admin_register');
     Route::get('about_us','IndexController@about_us');
     Route::get('register','IndexController@register');
     Route::get('member_login','IndexController@member_login');

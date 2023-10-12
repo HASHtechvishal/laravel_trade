@@ -3,15 +3,18 @@
 <section id="pricing" class="pricing section-bg">
     <div class="container">
        <div class="section-title" data-aos="fade-up">
-          <h2>admin <span style="color:#dd882c;">LOGIN</span></h2>
+          <h2>admin <span style="color:#dd882c;">REGISTER</span></h2>
        </div>
        <div class="login-page">
           <div class="form">
-             <form class="login-form" method="post" action="{{ url('/')}}">@csrf
-                <input type="text" name="username" id="username" placeholder="username" required=""/><br><br>
-                <input type="password" name="password" id="password" placeholder="password" required=""/><br><br>
+             <form class="login-form" method="post" action="{{ url('/admin_register')}}">@csrf
+                <input type="text" name="name" id="name" placeholder="Enter Name" required/><br><br>
+                <input type="text" name="mobile" id="mobile" placeholder="Enter Mobile Number" required/><br><br>
+                <input type="file" id="img" name="img" accept="image/*"><br>
+                <input type="text" name="email" id="email" placeholder="Enter Email" required/><br><br>
+                <input type="password" name="password" id="password" placeholder="Enter Password" required/><br><br>
                 <button>login</button>
-                <p class="message">IF YOU DON'T HAVE PASSWORD ? <a href="#"> FORGOT PASSWORD</a><br> <a href="{{ url('admin_register')}}"> Register as a admin</a></p>
+                <p class="message">Allready Admin - <a href="{{ url('login')}}"> LOGIN</a></p>
              </form>
           </div>
        </div>
