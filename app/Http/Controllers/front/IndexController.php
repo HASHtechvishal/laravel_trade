@@ -58,6 +58,7 @@ class IndexController extends Controller
                 $admin->image = $data['img'];
                 $admin->status = 1;
                 $admin->save();
+                return redirect('login');
             }
 
         }

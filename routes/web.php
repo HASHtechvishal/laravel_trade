@@ -43,6 +43,7 @@ Route::prefix('/admin')->namespace('admin')->group(function(){
     Route::get('faq','AdminController@faq');
     Route::get('users','AdminController@users');
     Route::get('stories','AdminController@stories');
+    Route::get('/logout','AdminController@admin_logout');
 
     });
 });
