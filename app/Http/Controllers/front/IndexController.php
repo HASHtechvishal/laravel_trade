@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Admin;
 use Auth;
+use Image;
+
 
 class IndexController extends Controller
 {
@@ -47,6 +49,22 @@ class IndexController extends Controller
             $adminCount = Admin::where('email',$data['email'])->count();
             //echo $adminCount; die;
 
+            //upload admin photo
+            if($req->hasFile('admin_img')){
+                $image_tmp = $req->file('admin_img');
+                if($image_tmp->isValid()){
+                    $extension = $image_tmp->getClientOriginalExtension(); 
+                    $NewimageName = $data['name'].rand(111,99999).'.'.$extension;
+                    $imagePath = 'admin/admin_image/'.$NewimageName;
+                    Image::make($image_tmp)->resize(30,30)->save($imagePath); 
+
+                }
+            }else if(!empty($data['current_admin_image'])){
+                $NewimageName = $data['current_admin_image'];
+            }else{
+                $NewimageName = "";
+            }
+
             if($adminCount > 0){
     			return redirect()->back();
             }else{
@@ -55,7 +73,7 @@ class IndexController extends Controller
                 $admin->mobile = $data['mobile'];
                 $admin->email = $data['email'];
                 $admin->password = bcrypt($data['password']);
-                $admin->image = $data['img'];
+                $admin->image = $NewimageName;
                 $admin->status = 1;
                 $admin->save();
                 return redirect('login');

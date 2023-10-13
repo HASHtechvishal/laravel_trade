@@ -123,7 +123,7 @@
         <li class="dropdown">
            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
            <span class="profile-ava">
-           <img alt="" src="img/avatar1_small.jpg">
+           <img alt="" src="{{asset('admin/admin_image/'.Auth::guard('admin')->user()->image)}}">
            </span>
            <span class="username">{{Auth::guard('admin')->user()->name}}</span>
            <b class="caret"></b>

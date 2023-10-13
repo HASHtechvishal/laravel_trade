@@ -7,10 +7,10 @@
        </div>
        <div class="login-page">
           <div class="form">
-             <form class="login-form" method="post" action="{{ url('/admin_register')}}">@csrf
+             <form class="login-form" method="post" action="{{ url('/admin_register')}}" enctype="multipart/form-data">@csrf
                 <input type="text" name="name" id="name" placeholder="Enter Name" required/><br><br>
                 <input type="text" name="mobile" id="mobile" placeholder="Enter Mobile Number" required/><br><br>
-                <input type="file" id="img" name="img" accept="image/*"><br>
+                <input type="file" id="admin_img" name="admin_img" placeholder="upload image" required><br>
                 <input type="text" name="email" id="email" placeholder="Enter Email" required/><br><br>
                 <input type="password" name="password" id="password" placeholder="Enter Password" required/><br><br>
                 <button>login</button>
