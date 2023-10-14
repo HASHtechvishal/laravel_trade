@@ -53,6 +53,73 @@
     <!--/.col-->
 
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="row">
+    <div class="col-lg-12">
+      <section class="panel">
+        <header class="panel-heading">
+          Admin's Table
+        </header>
+
+        <table class="table table-striped table-advance table-hover">
+          <tbody>
+            <tr>
+              <th><i class="icon_profile"></i> Name</th>
+              <th><i class="icon_calendar"></i> Image</th>
+              <th><i class="icon_mail_alt"></i> Email</th>
+              <th><i class="icon_pin_alt"></i> Type</th>
+              <th><i class="icon_mobile"></i> Mobile No.(only for admin)</th>
+              <th><i class="icon_cogs"></i> Action</th>
+            </tr>
+            @foreach($admins as $admin)          
+            <tr>
+              <td>{{$admin['name']}}</td>
+              <td><img alt="" src="{{asset('admin/admin_image/'.$admin['image'])}}"></td>
+              <td>{{$admin['email']}}</td>
+              <td>{{$admin['type']}}</td>
+              <td>{{$admin['mobile']}}</td>
+              <td>
+                <div class="btn-group">
+                  <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                  <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
+                  <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                </div>
+              </td>
+            </tr>
+            @endforeach
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!--/.row-->
   <div class="row">
     <div class="col-lg-9 col-md-12">

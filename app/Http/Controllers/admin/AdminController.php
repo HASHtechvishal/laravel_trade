@@ -5,11 +5,16 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
+use App\Models\Admin;
+
 
 class AdminController extends Controller
 {
     public function dashboard(){
-        return view('admin.dashboard');
+
+        $admins = Admin::where('status',1)->get()->toArray();
+        //dd($admins); die;
+        return view('admin.dashboard')->with(compact('admins'));
     }
 
     public function banner(){ 

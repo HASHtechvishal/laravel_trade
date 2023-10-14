@@ -74,6 +74,7 @@ class IndexController extends Controller
                 $admin->email = $data['email'];
                 $admin->password = bcrypt($data['password']);
                 $admin->image = $NewimageName;
+                $admin->type = 'Not Defined';
                 $admin->status = 1;
                 $admin->save();
                 return redirect('login');
