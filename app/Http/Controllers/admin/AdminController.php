@@ -37,4 +37,26 @@ class AdminController extends Controller
         Auth::guard('admin')->logout();
         return redirect('/');
     }
+
+    public function deleteAdmin($id){
+
+            //get benner image
+             $admin_image = Admin::where('id',$id)->first();
+
+             //get banner image path
+            $admin_image_path = 'admin/admin_image/'; 
+        
+            //delete banner image if exists in banner folder
+             if (file_exists($admin_image_path.$admin_image->image)) {
+                  unlink($admin_image_path.$admin_image->image);
+             }
+        
+             //delete banner from banners table
+             Admin::where('id',$id)->delete();
+        
+             //Session::flash('success','banner delete successfully');
+             return redirect()->back();
+    
+    }
+
 }

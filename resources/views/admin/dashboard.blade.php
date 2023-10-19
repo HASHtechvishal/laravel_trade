@@ -93,7 +93,7 @@
                 <div class="btn-group">
                   <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
                   <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                  <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                  <a class="btn btn-danger confirmDelete" href="javascript:void(0);" title="delete" name="delete" record="admin" recordid="{{$admin['id']}}"><i class="icon_close_alt2"></i></a>
                 </div>
               </td>
             </tr>
@@ -103,6 +103,8 @@
       </section>
     </div>
   </div>
+
+ 
 
 
 

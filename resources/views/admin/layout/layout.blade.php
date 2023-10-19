@@ -35,7 +35,10 @@
   <link href="{{ url('/admin/css/style-responsive.css') }}" rel="stylesheet" />
   <link href="{{ url('/admin/css/xcharts.min.css') }}" rel=" stylesheet">
   <link href="{{ url('/admin/css/jquery-ui-1.10.4.min.css') }}" rel="stylesheet">
-  
+
+
+
+
 </head>
 
 <body>
@@ -64,6 +67,7 @@
   <!-- container section start -->
 
   <!-- javascripts -->
+
   <script src="{{ url('admin/js/jquery.js') }}"></script>
   <script src="{{ url('admin/js/jquery-ui-1.10.4.min.js') }}"></script>
   <script src="{{ url('admin/js/jquery-1.8.3.min.js') }}"></script>
@@ -150,6 +154,9 @@
       });
     </script>
 
-</body>
+<script src="{{ url('admin/admin_js/admin.js') }}"></script>
+<!--sweet alert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>  
 
+</body>
 </html>
